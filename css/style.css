@@ -19,8 +19,9 @@ body {
   justify-self: end;
 }
 
-#inputField, #byQueryBtn {
+#inputField, #byQueryBtn,.searchType {
   color: rgb(96, 238, 13);
+  font-size: 30px;
 }
 
 #content {
