@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "rickmortyapi": "^0.3.0"
   }
 }

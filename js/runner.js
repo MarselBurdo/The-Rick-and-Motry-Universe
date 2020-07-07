@@ -1,0 +1,1 @@
+const rickMotry = require('rickmortyapi')

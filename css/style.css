@@ -1,0 +1,9 @@
+body {
+  font-family: 'Creepster', cursive;
+  /* min-height: 100vh; */
+  max-height: 100%;
+  /* overflow-y: hidden; */
+  background-image: url('../img/1890961.jpg');
+  text-transform: lowercase;
+}
+
