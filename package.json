@@ -2,8 +2,9 @@
   "name": "R-M-universe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "runner.js",
   "scripts": {
+    "start": "node runner.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
