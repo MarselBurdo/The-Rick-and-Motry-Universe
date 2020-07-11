@@ -1,5 +1,7 @@
-/* eslint-disable indent */
 /* eslint-disable linebreak-style */
+/* eslint-disable space-before-blocks */
+/* eslint-disable padded-blocks */
+/* eslint-disable indent */
 /* eslint-disable require-jsdoc */
 // const rickMarty = require('rickmortyapi')
 
@@ -7,7 +9,6 @@ const selectChoise = document.getElementById('searchType');
 const word = document.getElementsByClassName('is-large input')[0];
 const spinner = document.getElementsByClassName('spinner')[0];
 const content = document.getElementById('content');
-const article = document.getElementsByTagName('article')
 const resultContainer = document.getElementById('result-container');
 const actionBtn = document.getElementById('byQueryBtn');
 
@@ -49,14 +50,14 @@ actionBtn.addEventListener('click', () => {
     fetch(`https://rickandmortyapi.com/api/episode/${value}`)
       .then((res) => res.json())
       .then((data) => {
-        let tmpArr = []
-        data.characters.forEach(el => {
+        const tmpArr = [];
+        data.characters.forEach((el) => {
           fetch(`${el}`)
             .then((res) => res.json())
-            .then(data => {
-              tmpArr.push(data.name)
-            })
-        })
+            .then((data) => {
+              tmpArr.push(data.name);
+            });
+        });
         // console.log(tmpArr)
         renderResult(data, tmpArr);
 
