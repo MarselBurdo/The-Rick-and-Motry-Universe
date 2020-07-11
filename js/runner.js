@@ -11,31 +11,44 @@ const actionBtn = document.getElementById('byQueryBtn');
 
 actionBtn.addEventListener('click', () => {
   function searchByName(value) {
+    resultContainer.style.visibility ='hidden'
+    spinner.style.visibility = 'visible';
     fetch(`https://rickandmortyapi.com/api/character/?name=${value}`)
         .then((res) => res.json())
-        .then((data) => console.log(data));
-    spinner.style.visibility = 'visible';
+        .then((data) => renderResult(data.results))
     setTimeout(() => {
       spinner.style.visibility = 'hidden';
+      resultContainer.style.visibility ='visible'
     }, 3000);
   }
   function searchByEpisode(value) {
+    resultContainer.style.visibility ='hidden'
+    spinner.style.visibility = 'visible';
     fetch(`https://rickandmortyapi.com/api/episode/${value}`)
         .then((res) => res.json())
         .then((data) => console.log(data));
-    spinner.style.visibility = 'visible';
     setTimeout(() => {
       spinner.style.visibility = 'hidden';
+      resultContainer.style.visibility ='visible'
     }, 3000);
   }
   function searchByLocation(value) {
+    resultContainer.style.visibility ='hidden'
+    spinner.style.visibility = 'visible';
     fetch(`https://rickandmortyapi.com/api/location/${value}`)
         .then((res) => res.json())
         .then((data) => console.log(data));
-    spinner.style.visibility = 'visible';
     setTimeout(() => {
       spinner.style.visibility = 'hidden';
+      resultContainer.style.visibility ='visible'
     }, 3000);
+  }
+  function renderResult(objValue) {
+    content.innerHTML='';
+    content.innerHTML= `
+    <img src ="${obj.image}"'>`
+
+
   }
   switch (selectChoise.selectedIndex) {
     case 0:
