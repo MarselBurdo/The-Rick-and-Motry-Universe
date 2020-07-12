@@ -1,5 +1,5 @@
 Цель проекта:
-Повеселиться, вспорнить о сериале "Rick and Morty".
+Повеселиться, вспорнить о сериале "<a href="https://marselburdo.github.io/Rick-Motry-Universe/" rel="nofollow">Rick and Morty</a>".
 
 Функционал:
 
@@ -21,5 +21,4 @@
 
 
 
-<a href="https://marselburdo.github.io/Rick-Motry-Universe/" rel="nofollow">Rick and Morty</a>
-Сама игра ()
+
