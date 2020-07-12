@@ -1,7 +1,7 @@
 
 
 Цель проекта:
-Повеселиться, вспорнить о сериале "<a href="https://marselburdo.github.io/Rick-Motry-Universe/" rel="nofollow"> The Rick and Morty</a>".
+Повеселиться, вспорнить о сериале "<a href="https://marselburdo.github.io/The-Rick-and-Motry-Universe/" rel="nofollow"> The Rick and Morty</a>".
 
 Функционал:
 

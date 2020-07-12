@@ -2,7 +2,7 @@
 
 <h2>Target</h2>
 
-Have some fun, refresh one's memory about "<a href="https://marselburdo.github.io/Rick-Motry-Universe/" rel="nofollow">The Rick and Morty</a>"<-click
+Have some fun, refresh one's memory about "<a href="https://marselburdo.github.io/The-Rick-and-Motry-Universe/" rel="nofollow">The Rick and Morty</a>"<-click
 
 <h2>Use</h2>
 
