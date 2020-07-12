@@ -21,5 +21,5 @@
 
 
 
-
-Сама игра (https://marselburdo.github.io/Rick-Motry-Universe/)
+<a href="https://marselburdo.github.io/Rick-Motry-Universe/" rel="nofollow">Rick and Morty</a>
+Сама игра ()
