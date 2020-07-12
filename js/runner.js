@@ -106,17 +106,19 @@ actionBtn.addEventListener('click', () => {
     let tmp;
     console.log(objValue);
     objValue.forEach((value) => {
-      if (value.image){
-        tmp += `
+      if (value.image) {
+        tmp += `<div class='colunm is-one-quarter'>
         <img  class='outputImage' src ="${value.image}"'>
         <div class ='outputInfo'>${value.name}</div>
-        <div class ='outputInfo'>${value.dimension}</div>
+        <div class ='outputInfo'>${value.status}</div>
         <br><br><br><br><br>
+        </div>
         `;
       } else {
-        tmp += `
+        tmp += `<div class='colunm is-one-quarter'>
         <div class ='outputInfo'>${value.name}</div>
         <div class ='outputInfo'>${value.dimension}</div><br><br><br><br><br>
+        </div>
         `;
 
       }
@@ -126,8 +128,12 @@ actionBtn.addEventListener('click', () => {
   }
   function renderResult(objValue, arr) {
 
-    console.log(arr);
-    content.innerHTML = `<div class ='outputInfo'>${objValue.name}</div>`;
+    // console.log(arr);
+    // <div class ='outputInfo'>${arr[0]}</div>
+    content.innerHTML = `<div class='colunm is-one-quarter'>
+    <div class ='outputInfo'>${objValue.name}</div>
+    
+    </div>`;
     // content.innerHTML = '';
     // let tmp;
     // arr.forEach(el => {

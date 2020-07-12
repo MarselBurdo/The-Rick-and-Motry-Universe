@@ -40,19 +40,15 @@ body {
   animation: neon .08s ease-in-out infinite alternate;
   
 }
-/* article {
-  display: grid;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-} */
+
 
 #content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   max-height: 50vh;
   min-height: 80vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-x: auto;
+  overflow-y: auto;
   background: unset;
 
 }
