@@ -44,25 +44,20 @@ actionBtn.addEventListener('click', () => {
     }, 3000);
   }
 
-  function searchByEpisode(value) {
+
+  async function searchByEpisode(value) {
     resultContainer.style.visibility = 'hidden';
     spinner.style.visibility = 'visible';
-    fetch(`https://rickandmortyapi.com/api/episode/${value}`)
-      .then((res) => res.json())
-      .then((data) => {
-        const tmpArr = [];
-        data.characters.forEach((el) => {
-          fetch(`${el}`)
-            .then((res) => res.json())
-            .then((data) => {
-              tmpArr.push(data.name);
-            });
-        });
-        // console.log(tmpArr)
-        renderResult(data, tmpArr);
+    const data = await (await fetch(`https://rickandmortyapi.com/api/episode/${value}`)).json();
+
+    const arrOfUrls = data.characters.map(url => fetch(`${url}`));
+    Promise.all(arrOfUrls)
+      .then(res => res.map(el => el.json()))
+      .then(pretty => Promise.all(pretty))
+      .then(res => renderResult(data, res))
 
 
-      });
+
     setTimeout(() => {
       spinner.style.visibility = 'hidden';
       resultContainer.style.visibility = 'visible';
@@ -103,7 +98,7 @@ actionBtn.addEventListener('click', () => {
   function renderResultPeople(objValue) {
     content.innerHTML = '';
     content.innerText = '';
-    let tmp;
+    let tmp = '';
     console.log(objValue);
     objValue.forEach((value) => {
       if (value.image) {
@@ -116,6 +111,7 @@ actionBtn.addEventListener('click', () => {
         `;
       } else {
         tmp += `<div class='colunm is-one-quarter'>
+      <img  class='noborder' src ="./img/icon.png"'>
         <div class ='outputInfo'>${value.name}</div>
         <div class ='outputInfo'>${value.dimension}</div><br><br><br><br><br>
         </div>
@@ -127,19 +123,22 @@ actionBtn.addEventListener('click', () => {
     content.innerHTML = tmp;
   }
   function renderResult(objValue, arr) {
-
-    // console.log(arr);
-    // <div class ='outputInfo'>${arr[0]}</div>
-    content.innerHTML = `<div class='colunm is-one-quarter'>
-    <div class ='outputInfo'>${objValue.name}</div>
-    
+    content.innerHTML = '';
+    content.innerText = '';
+    let tmp = '';
+    console.log(arr);   
+    tmp+= `<div class='colunm is-half'>
+    <div class ='outputTitle'>Episode title:   ${objValue.name}</div>
     </div>`;
-    // content.innerHTML = '';
-    // let tmp;
-    // arr.forEach(el => {
-    //   tmp += `<div class ='outputInfo'>${el}</div>`;
-    // })
-    // content.innerHTML = tmp;
+    arr.forEach(el=>{
+      tmp+=`<div class='colunm is-one-quarter'>
+      <img  class='outputImage' src ="${el.image}"'>
+      <div class ='outputInfo'>${el.name}</div>
+      <div class ='outputInfo'>${el.status}</div>
+      <br><br><br><br><br>
+      </div>`
+    })
+    content.innerHTML=tmp;
   }
 
   switch (selectChoise.selectedIndex) {

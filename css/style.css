@@ -28,9 +28,18 @@ body {
   color: rgb(96, 238, 13);
   font-size: 35px;
 }
+.outputTitle{
+  font-size: 50px;
+  color: #eef110;
+  animation: neon .08s ease-in-out infinite alternate;
+}
 .outputImage {
   border: 2px solid green;
   border-radius: 12px;
+  max-width: 200px;
+  max-height: 200px;
+}
+.noborder {
   max-width: 200px;
   max-height: 200px;
 }
