@@ -41,6 +41,7 @@ actionBtn.addEventListener('click', () => {
     setTimeout(() => {
       spinner.style.visibility = 'hidden';
       resultContainer.style.visibility = 'visible';
+      resultContainer.style.backgroundColor = 'rgba(55, 206,76, 0.57)';
     }, 3000);
   }
 
@@ -61,6 +62,7 @@ actionBtn.addEventListener('click', () => {
     setTimeout(() => {
       spinner.style.visibility = 'hidden';
       resultContainer.style.visibility = 'visible';
+      resultContainer.style.backgroundColor = 'rgba(55, 206,76, 0.57)';
     }, 3000);
   }
   function searchByLocation(value) {
@@ -91,6 +93,7 @@ actionBtn.addEventListener('click', () => {
     setTimeout(() => {
       spinner.style.visibility = 'hidden';
       resultContainer.style.visibility = 'visible';
+      resultContainer.style.backgroundColor = 'rgba(55, 206,76, 0.57)';
     }, 3000);
   }
 
