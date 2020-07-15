@@ -1,4 +1,4 @@
-
+<img src='../img/new.gif' alt='cool gif' style='max-width: 100%'>
 
 Цель проекта:
 Повеселиться, вспорнить о сериале "<a href="https://marselburdo.github.io/The-Rick-and-Motry-Universe/" rel="nofollow"> The Rick and Morty</a>".

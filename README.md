@@ -1,3 +1,5 @@
+<img src='./img/new.gif' alt='cool gif' style='max-width: 100%'>
+
 # The-Rick-and-Morty-Universe.
 
 <h2>Target</h2>
